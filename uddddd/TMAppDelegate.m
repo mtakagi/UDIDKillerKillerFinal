@@ -7,13 +7,35 @@
 //
 
 #import "TMAppDelegate.h"
+#import "GetUniqueIdentifier.h"
+#import <objc/runtime.h>
 
 @implementation TMAppDelegate
 
 @synthesize window = _window;
 
++ (void)load 
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        unsigned int i, count;
+        Method *methods = class_copyMethodList([UIDevice class], &count);
+        for (i = 0; i < count; i++) {
+            Method method = methods[i];
+            if (sel_isEqual(method_getName(method), @selector(uniqueIdentifier))) {
+                IMP imp = imp_implementationWithBlock((void*)objc_unretainedPointer(^(NSString *s) { return @"";}));
+                method_setImplementation(method, imp);
+            }
+        }
+        free(methods);
+    });
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"%@", [[UIDevice currentDevice] uniqueIdentifier]);
+    NSLog(@"UDID is %@.", getUniqueIdentifier());
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

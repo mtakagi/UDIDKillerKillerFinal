@@ -12,7 +12,8 @@
 		658AC89A14EE09F6009D02D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658AC89914EE09F6009D02D3 /* CoreGraphics.framework */; };
 		658AC8A014EE09F6009D02D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 658AC89E14EE09F6009D02D3 /* InfoPlist.strings */; };
 		658AC8A214EE09F6009D02D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AC8A114EE09F6009D02D3 /* main.m */; };
-		658AC8A614EE09F6009D02D3 /* TMAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 658AC8A514EE09F6009D02D3 /* TMAppDelegate.mm */; };
+		658AC8A614EE09F6009D02D3 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AC8A514EE09F6009D02D3 /* TMAppDelegate.m */; };
+		658AC8B214F0E9C2009D02D3 /* GetUniqueIdentifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 658AC8B114F0E9C2009D02D3 /* GetUniqueIdentifier.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +26,10 @@
 		658AC8A114EE09F6009D02D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		658AC8A314EE09F6009D02D3 /* uddddd-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uddddd-Prefix.pch"; sourceTree = "<group>"; };
 		658AC8A414EE09F6009D02D3 /* TMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
-		658AC8A514EE09F6009D02D3 /* TMAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TMAppDelegate.mm; sourceTree = "<group>"; };
+		658AC8A514EE09F6009D02D3 /* TMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
 		658AC8B014EF7770009D02D3 /* objc-runtime-new.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "objc-runtime-new.h"; sourceTree = "<group>"; };
+		658AC8B114F0E9C2009D02D3 /* GetUniqueIdentifier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GetUniqueIdentifier.mm; sourceTree = "<group>"; };
+		658AC8B314F0EA59009D02D3 /* GetUniqueIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; path = GetUniqueIdentifier.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +78,9 @@
 			children = (
 				658AC8A414EE09F6009D02D3 /* TMAppDelegate.h */,
 				658AC8B014EF7770009D02D3 /* objc-runtime-new.h */,
-				658AC8A514EE09F6009D02D3 /* TMAppDelegate.mm */,
+				658AC8A514EE09F6009D02D3 /* TMAppDelegate.m */,
+				658AC8B114F0E9C2009D02D3 /* GetUniqueIdentifier.mm */,
+				658AC8B314F0EA59009D02D3 /* GetUniqueIdentifier.h */,
 				658AC89C14EE09F6009D02D3 /* Supporting Files */,
 			);
 			path = uddddd;
@@ -154,7 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				658AC8A214EE09F6009D02D3 /* main.m in Sources */,
-				658AC8A614EE09F6009D02D3 /* TMAppDelegate.mm in Sources */,
+				658AC8A614EE09F6009D02D3 /* TMAppDelegate.m in Sources */,
+				658AC8B214F0E9C2009D02D3 /* GetUniqueIdentifier.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

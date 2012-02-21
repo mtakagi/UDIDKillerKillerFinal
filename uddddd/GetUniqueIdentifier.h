@@ -14,6 +14,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+// 実機では UDID が取得できないらしい。
 NSString *getUniqueIdentifier();
 #ifdef __cplusplus
 }
